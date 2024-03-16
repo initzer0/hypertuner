@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools >= 40.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hypertuner"
+dependencies = []
+requires-python = ">=3.8"
+authors = [{ name = "init-0" }]
+maintainers = [{ name = "init-0" }]
+description = "Automatic hyperparameter tuning for statistical"
+dynamic = ["version", "readme"]
+license = { file = "LICENSE" }
+keywords = ["hyperparameter", "tuning", "machine learning"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+]
+
+[project.optional-dependencies]
+tests = ["pytest"]
+keras = ["keras"]
+progress = ["tqdm"]
+
+[tool.setuptools.dynamic]
+version = { attr = "hypertuner.VERSION" }
+readme = { file = ["README.md"] }
+
+#[project.urls]
+#Homepage = "https://example.com"
+#Documentation = "https://readthedocs.org"
+#Repository = "https://github.com/me/spam.git"
+#"Bug Tracker" = "https://github.com/me/spam/issues"
+#Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
+#[project.scripts]
+#spam-cli = "spam:main_cli"
+
+#[project.gui-scripts]
+#spam-gui = "spam:main_gui"
+
+#[project.entry-points."spam.magical"]
+#tomatoes = "spam:main_tomatoes"
